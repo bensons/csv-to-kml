@@ -4,20 +4,29 @@ Convert CSV files with addresses or coordinates to KML format for Google Earth a
 
 ## Installation
 
-Download `csv_to_kml.py` or clone this repository.
+Clone this repository and install using Poetry:
 
-For address geocoding: `pip install geopy`
+```bash
+git clone https://github.com/yourusername/csv-to-kml
+cd csv-to-kml
+poetry install
+```
+
+For address geocoding support:
+```bash
+poetry install -E geocoding
+```
 
 ## Usage
 
 **Convert addresses to KML:**
 ```bash
-python csv_to_kml.py data.csv
+poetry run csv-to-kml data.csv
 ```
 
 **Use existing coordinates:**
 ```bash
-python csv_to_kml.py data.csv --skip-geocoding --lat-column Latitude --lon-column Longitude
+poetry run csv-to-kml data.csv --skip-geocoding --lat-column Latitude --lon-column Longitude
 ```
 
 **Options:**
